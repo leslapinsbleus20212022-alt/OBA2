@@ -1,0 +1,336 @@
+{
+  "entities": {
+    "Category": {
+      "title": "Category",
+      "description": "Product category managed by OBA IMPÉRIAL administrators.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 80,
+          "description": "Category display name in French."
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "Short category description."
+        },
+        "active": {
+          "type": "boolean",
+          "description": "Whether the category is visible in the storefront."
+        },
+        "sortOrder": {
+          "type": "number",
+          "description": "Display order."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["name", "description", "active", "sortOrder", "createdAt", "updatedAt"]
+    },
+    "Product": {
+      "title": "Product",
+      "description": "Catalogue product with category and multiple commercial packOptions.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 120
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 300
+        },
+        "categoryId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "categoryName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "price": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "packOptions": {
+          "type": "array",
+          "description": "Available packaging formats (individual bottle, carton, etc.) with prices in FCFA (XOF)."
+        },
+        "imageUrl": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300000
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "available": {
+          "type": "boolean"
+        },
+        "isDemoPrice": {
+          "type": "boolean"
+        },
+        "sortOrder": {
+          "type": "number"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "categoryId",
+        "categoryName",
+        "price",
+        "unit",
+        "packOptions",
+        "imageUrl",
+        "active",
+        "available",
+        "isDemoPrice",
+        "sortOrder",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "Wholesale order with independent delivery and payment statuses and delivery date confirmation.",
+      "type": "object",
+      "properties": {
+        "orderNumber": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 32,
+          "pattern": "^OBA-[0-9]{6}-[A-Z0-9]{4}$"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "nouvelle",
+            "confirmee",
+            "en_preparation",
+            "en_livraison",
+            "livree",
+            "refusee"
+          ]
+        },
+        "paymentStatus": {
+          "type": "string",
+          "enum": ["en_attente", "partiel", "paye"]
+        },
+        "deliveryDateStatus": {
+          "type": "string",
+          "enum": ["en_attente", "confirmee", "autre_date_proposee"]
+        },
+        "confirmedDeliveryDate": {
+          "type": "string",
+          "maxLength": 60
+        },
+        "deliveryScheduleNote": {
+          "type": "string",
+          "maxLength": 300
+        },
+        "customerName": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 120
+        },
+        "phone": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 32
+        },
+        "recipientName": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 120
+        },
+        "addressText": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 300
+        },
+        "district": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 100
+        },
+        "city": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 100
+        },
+        "cityDistrict": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "landmark": {
+          "type": "string",
+          "maxLength": 240
+        },
+        "hasGps": {
+          "type": "boolean"
+        },
+        "latitude": {
+          "type": "number"
+        },
+        "longitude": {
+          "type": "number"
+        },
+        "deliveryTiming": {
+          "type": "string",
+          "enum": ["asap", "today", "tomorrow", "scheduled"]
+        },
+        "requestedDate": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "items": {
+          "type": "array"
+        },
+        "totalAmount": {
+          "type": "number"
+        },
+        "currency": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 16
+        },
+        "statusHistory": {
+          "type": "array"
+        },
+        "adminNote": {
+          "type": "string",
+          "maxLength": 300
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "orderNumber",
+        "status",
+        "paymentStatus",
+        "deliveryDateStatus",
+        "customerName",
+        "phone",
+        "recipientName",
+        "addressText",
+        "district",
+        "city",
+        "cityDistrict",
+        "landmark",
+        "hasGps",
+        "deliveryTiming",
+        "requestedDate",
+        "notes",
+        "items",
+        "totalAmount",
+        "currency",
+        "statusHistory",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "AdminUser": {
+      "title": "AdminUser",
+      "description": "Authorized OBA IMPÉRIAL administrator record keyed by Firebase Auth UID.",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160
+        },
+        "displayName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "role": {
+          "type": "string",
+          "enum": ["admin"]
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["email", "displayName", "role", "createdAt"]
+    },
+    "StoreSettings": {
+      "title": "StoreSettings",
+      "description": "Official storefront configuration such as the OBA IMPÉRIAL WhatsApp order number.",
+      "type": "object",
+      "properties": {
+        "whatsappNumber": {
+          "type": "string",
+          "maxLength": 24,
+          "pattern": "^[0-9]*$"
+        },
+        "updatedBy": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["whatsappNumber", "updatedBy", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/categories/{categoryId}": {
+      "schema": { "$ref": "#/entities/Category" },
+      "description": "Legacy categories collection (admin-only cleanup)."
+    },
+    "/products/{productId}": {
+      "schema": { "$ref": "#/entities/Product" },
+      "description": "Publicly readable official product catalog; admin write-protected."
+    },
+    "/orders/{orderId}": {
+      "schema": { "$ref": "#/entities/Order" },
+      "description": "Wholesale orders with independent delivery and payment status; public create in initial state, admin read/update/delete."
+    },
+    "/admins/{adminId}": {
+      "schema": { "$ref": "#/entities/AdminUser" },
+      "description": "Administrator allowlist documents keyed by UID."
+    },
+    "/settings/{settingId}": {
+      "schema": { "$ref": "#/entities/StoreSettings" },
+      "description": "Publicly readable official store settings (WhatsApp number); admin write-protected."
+    }
+  }
+}

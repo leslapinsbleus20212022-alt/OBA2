@@ -1,0 +1,1045 @@
+<!--
+  =============================================================================
+  OBA IMPÉRIAL — BLOC HTML COMPLET POUR WORDPRESS + ELEMENTOR (WIDGET « HTML »)
+  =============================================================================
+  INSTRUCTIONS RAPIDES :
+  1. Sur WordPress, allez dans « Médias » → « Ajouter » et importez vos 3 visuels
+     officiels OBA IMPÉRIAL (depuis le dossier public/assets/aistudio/ du projet).
+  2. Copiez le lien URL de chaque image importée et collez-les dans
+     `OBA_IMAGES` ci-dessous (sinon un visuel élégant OBA IMPÉRIAL s'affiche par défaut).
+  3. Dans Elementor, glissez le widget « HTML » dans une section pleine largeur,
+     collez TOUT le contenu de ce fichier et cliquez sur « Mettre à jour ».
+  =============================================================================
+-->
+
+<div id="oba-imperial-app" class="oba-root">
+  <!-- En-tête de marque -->
+  <header class="oba-hero">
+    <div class="oba-container oba-hero-grid">
+      <div class="oba-hero-text">
+        <div class="oba-brand">
+          <svg class="oba-crown" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="24" cy="24" r="22" stroke="#D4AF37" stroke-width="1.5" fill="#16110E" />
+            <path d="M12 31L15 18L21 23L24 14L27 23L33 18L36 31H12Z" stroke="#D4AF37" stroke-width="1.8" stroke-linejoin="round" fill="#3B1F11" />
+            <path d="M13 35H35" stroke="#A97142" stroke-width="1.8" stroke-linecap="round" />
+            <circle cx="24" cy="12" r="1.7" fill="#E5C158" />
+          </svg>
+          <div>
+            <div class="oba-brand-title">OBA IMPÉRIAL</div>
+            <div class="oba-brand-slogan">BORN FROM AFRICA ROYALTIES</div>
+          </div>
+        </div>
+
+        <h1 class="oba-h1">Bienvenue chez OBA IMPÉRIAL</h1>
+        <p class="oba-lead">
+          Commandez nos deux références officielles par pack de 10 unités et envoyez directement votre commande sur WhatsApp. Livraison assurée par notre équipe, paiement à la livraison.
+        </p>
+
+        <a href="#oba-catalogue" class="oba-btn oba-btn-gold oba-btn-lg">
+          PASSER UNE COMMANDE
+        </a>
+
+        <div class="oba-trust">
+          <span>Tarifs publics en FCFA</span>
+          <span aria-hidden="true">·</span>
+          <span>Livraison par OBA IMPÉRIAL</span>
+          <span aria-hidden="true">·</span>
+          <span>Paiement à la livraison</span>
+        </div>
+      </div>
+
+      <div class="oba-hero-media" id="oba-hero-media"></div>
+    </div>
+  </header>
+
+  <!-- Catalogue officiel (2 produits uniquement) -->
+  <section id="oba-catalogue" class="oba-section">
+    <div class="oba-container-narrow">
+      <div class="oba-section-head">
+        <h2 class="oba-h2">Nos produits officiels</h2>
+        <p class="oba-sub">
+          Sélectionnez votre nombre de packs de 10 unités avec les boutons <strong>+</strong> et <strong>−</strong>.
+        </p>
+      </div>
+
+      <div class="oba-products-grid">
+        <!-- PRODUIT 1 : OBA IMPÉRIAL GIN -->
+        <article class="oba-card" id="oba-card-gin">
+          <div class="oba-card-media" id="oba-media-gin"></div>
+          <div class="oba-card-body">
+            <div>
+              <div class="oba-meta">Pack de 10 unités · Disponible</div>
+              <h3 class="oba-card-title">OBA IMPÉRIAL GIN</h3>
+            </div>
+
+            <div class="oba-card-footer">
+              <div class="oba-price-row">
+                <div>
+                  <div class="oba-price">2 750 FCFA</div>
+                  <div class="oba-price-sub">le pack de 10 unités</div>
+                </div>
+                <div class="oba-subtotal-box" id="oba-sub-gin-wrap" style="display: none;">
+                  <div class="oba-subtotal-label">Sous-total</div>
+                  <div class="oba-subtotal-val" id="oba-sub-gin">0 FCFA</div>
+                </div>
+              </div>
+
+              <div class="oba-stepper">
+                <button type="button" class="oba-step-btn oba-step-minus" id="oba-minus-gin" aria-label="Diminuer OBA IMPÉRIAL GIN" disabled>−</button>
+                <div class="oba-step-display">
+                  <span class="oba-step-num" id="oba-qty-gin">0</span>
+                  <span class="oba-step-unit" id="oba-unit-gin">pack de 10</span>
+                </div>
+                <button type="button" class="oba-step-btn oba-step-plus" id="oba-plus-gin" aria-label="Augmenter OBA IMPÉRIAL GIN">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUIT 2 : OBA IMPÉRIAL WHISKY -->
+        <article class="oba-card" id="oba-card-whisky">
+          <div class="oba-card-media" id="oba-media-whisky"></div>
+          <div class="oba-card-body">
+            <div>
+              <div class="oba-meta">Pack de 10 unités · Disponible</div>
+              <h3 class="oba-card-title">OBA IMPÉRIAL WHISKY</h3>
+            </div>
+
+            <div class="oba-card-footer">
+              <div class="oba-price-row">
+                <div>
+                  <div class="oba-price">3 500 FCFA</div>
+                  <div class="oba-price-sub">le pack de 10 unités</div>
+                </div>
+                <div class="oba-subtotal-box" id="oba-sub-whisky-wrap" style="display: none;">
+                  <div class="oba-subtotal-label">Sous-total</div>
+                  <div class="oba-subtotal-val" id="oba-sub-whisky">0 FCFA</div>
+                </div>
+              </div>
+
+              <div class="oba-stepper">
+                <button type="button" class="oba-step-btn oba-step-minus" id="oba-minus-whisky" aria-label="Diminuer OBA IMPÉRIAL WHISKY" disabled>−</button>
+                <div class="oba-step-display">
+                  <span class="oba-step-num" id="oba-qty-whisky">0</span>
+                  <span class="oba-step-unit" id="oba-unit-whisky">pack de 10</span>
+                </div>
+                <button type="button" class="oba-step-btn oba-step-plus" id="oba-plus-whisky" aria-label="Augmenter OBA IMPÉRIAL WHISKY">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Résumé Panier & Bouton Continuer -->
+      <div class="oba-cart-summary" id="oba-cart-summary" style="display: none;">
+        <div>
+          <div class="oba-cart-lines" id="oba-cart-lines"></div>
+          <div class="oba-cart-total" id="oba-cart-total">Total : 0 FCFA</div>
+        </div>
+        <a href="#oba-formulaire" class="oba-btn oba-btn-gold">
+          CONTINUER
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulaire de commande & Préparation WhatsApp -->
+  <section id="oba-formulaire" class="oba-section oba-section-border">
+    <div class="oba-container-form">
+      <div class="oba-section-head">
+        <h2 class="oba-h2">Finaliser votre commande</h2>
+        <p class="oba-sub">
+          Livraison assurée par l&apos;équipe OBA IMPÉRIAL · Paiement à la livraison uniquement.
+        </p>
+      </div>
+
+      <form id="oba-order-form" class="oba-form-stack">
+        <div class="oba-paper-card">
+          <h3 class="oba-form-title">1. Vos coordonnées</h3>
+          <div class="oba-field-grid">
+            <div class="oba-field">
+              <label for="oba-f-name">Nom et prénom *</label>
+              <input id="oba-f-name" type="text" required maxlength="120" placeholder="Ex : Kouassi Jean" />
+            </div>
+            <div class="oba-field">
+              <label for="oba-f-phone">Numéro de téléphone *</label>
+              <input id="oba-f-phone" type="tel" required maxlength="32" placeholder="Ex : +229 01 97 00 00 00" />
+            </div>
+          </div>
+        </div>
+
+        <div class="oba-paper-card">
+          <h3 class="oba-form-title">2. Adresse et date de livraison</h3>
+          <div class="oba-field-grid oba-cols-2">
+            <div class="oba-field">
+              <label for="oba-f-city">Ville *</label>
+              <input id="oba-f-city" type="text" required maxlength="100" placeholder="Ex : Cotonou" />
+            </div>
+            <div class="oba-field">
+              <label for="oba-f-district">Quartier *</label>
+              <input id="oba-f-district" type="text" required maxlength="100" placeholder="Ex : Akpakpa" />
+            </div>
+          </div>
+
+          <div class="oba-field">
+            <label for="oba-f-address">Adresse ou indication précise du lieu de livraison *</label>
+            <input id="oba-f-address" type="text" required maxlength="300" placeholder="Ex : Rue pavée après la pharmacie, portail noir" />
+          </div>
+
+          <div class="oba-field">
+            <button type="button" id="oba-gps-btn" class="oba-btn oba-btn-dark oba-btn-full">
+              PARTAGER MA POSITION GPS (FACULTATIF)
+            </button>
+            <div id="oba-gps-status" class="oba-gps-status" style="display: none;"></div>
+          </div>
+
+          <div class="oba-field">
+            <label for="oba-f-date">Date souhaitée de livraison *</label>
+            <div class="oba-date-row">
+              <button type="button" class="oba-date-quick" id="oba-date-today">Aujourd&apos;hui</button>
+              <button type="button" class="oba-date-quick" id="oba-date-tomorrow">Demain</button>
+              <input id="oba-f-date" type="date" required />
+            </div>
+          </div>
+
+          <div class="oba-field">
+            <label for="oba-f-notes">Instructions complémentaires (facultatif)</label>
+            <textarea id="oba-f-notes" rows="2" maxlength="500" placeholder="Ex : Appeler avant d'arriver"></textarea>
+          </div>
+        </div>
+
+        <!-- Récapitulatif & Aperçu WhatsApp -->
+        <div class="oba-dark-card">
+          <h3 class="oba-dark-title">3. Récapitulatif et envoi sur WhatsApp</h3>
+          <div id="oba-recap-box" class="oba-recap-box">
+            Sélectionnez au moins un pack ci-dessus pour voir votre total.
+          </div>
+
+          <div class="oba-cod-note">
+            <strong>Paiement à la livraison uniquement :</strong> aucun paiement en ligne. Vous vérifiez votre message ci-dessous puis vous cliquez sur Envoyer dans WhatsApp.
+          </div>
+
+          <div id="oba-form-error" class="oba-error" style="display: none;"></div>
+
+          <button type="submit" class="oba-btn oba-btn-gold oba-btn-full oba-btn-lg">
+            PRÉPARER LE MESSAGE WHATSAPP
+          </button>
+        </div>
+      </form>
+
+      <!-- Zone de vérification avant envoi WhatsApp -->
+      <div id="oba-wa-review" class="oba-paper-card oba-wa-review" style="display: none;">
+        <h3 class="oba-form-title">Vérifiez votre commande avant l&apos;envoi sur WhatsApp</h3>
+        <p class="oba-review-info">
+          Votre commande n&apos;est <strong>pas encore envoyée</strong>. Relisez le message ci-dessous, puis appuyez sur <strong>« ENVOYER SUR WHATSAPP »</strong> et validez l&apos;envoi dans WhatsApp.
+        </p>
+
+        <pre id="oba-wa-preview" class="oba-wa-preview"></pre>
+
+        <div class="oba-wa-actions">
+          <a id="oba-wa-link" href="#" target="_blank" rel="noopener noreferrer" class="oba-btn oba-btn-whatsapp oba-btn-full oba-btn-lg">
+            ENVOYER SUR WHATSAPP
+          </a>
+          <button type="button" id="oba-wa-copy" class="oba-btn oba-btn-muted oba-btn-full">
+            Copier le message
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer class="oba-footer">
+    <div class="oba-container oba-footer-inner">
+      <div><strong>OBA IMPÉRIAL</strong> · <span style="color:#D4AF37;">BORN FROM AFRICA ROYALTIES</span></div>
+      <div>Livraison assurée par OBA IMPÉRIAL · Paiement à la livraison</div>
+    </div>
+  </footer>
+</div>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+  .oba-root, .oba-root * {
+    box-sizing: border-box;
+  }
+  .oba-root {
+    background-color: #0B0908;
+    color: #FAF7F0;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .oba-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .oba-container-narrow {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .oba-container-form {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .oba-hero {
+    background: linear-gradient(180deg, #0B0908 0%, #16110E 65%, #1C120C 100%);
+    border-bottom: 1px solid rgba(169, 113, 66, 0.25);
+    padding: 44px 0;
+  }
+  .oba-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+  @media (min-width: 900px) {
+    .oba-hero-grid {
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 44px;
+    }
+  }
+  .oba-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .oba-crown {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+  .oba-brand-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #FAF7F0;
+    line-height: 1;
+  }
+  .oba-brand-slogan {
+    margin-top: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: #D4AF37;
+    text-transform: uppercase;
+  }
+  .oba-h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    font-weight: 700;
+    color: #FAF7F0;
+    line-height: 1.1;
+    margin: 0 0 14px 0;
+  }
+  .oba-h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700;
+    color: #FAF7F0;
+    margin: 0 0 6px 0;
+  }
+  .oba-lead {
+    color: rgba(239, 232, 218, 0.88);
+    font-size: 16px;
+    margin: 0 0 24px 0;
+    max-width: 540px;
+  }
+  .oba-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    margin-top: 18px;
+    font-size: 13px;
+    color: #D4AF37;
+  }
+  .oba-hero-media {
+    min-height: 280px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(169, 113, 66, 0.35);
+    background: #120E0B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .oba-hero-media img {
+    width: 100%;
+    height: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    display: block;
+  }
+  .oba-section {
+    padding: 48px 0;
+  }
+  .oba-section-border {
+    border-top: 1px solid rgba(169, 113, 66, 0.2);
+  }
+  .oba-section-head {
+    margin-bottom: 28px;
+  }
+  .oba-sub {
+    color: rgba(239, 232, 218, 0.82);
+    font-size: 15px;
+    margin: 0;
+  }
+  .oba-products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 720px) {
+    .oba-products-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .oba-card {
+    background-color: #FAF7F0;
+    color: #17120E;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(169, 113, 66, 0.35);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s ease;
+  }
+  .oba-card.oba-card-active {
+    box-shadow: 0 0 0 2px #D4AF37, 0 18px 36px rgba(0, 0, 0, 0.45);
+  }
+  .oba-card-media {
+    height: 290px;
+    background-color: #120E0B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .oba-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .oba-card-body {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 18px;
+    flex: 1;
+  }
+  .oba-meta {
+    font-size: 12px;
+    font-weight: 600;
+    color: #7C401A;
+    margin-bottom: 6px;
+  }
+  .oba-card-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #17120E;
+    margin: 0;
+  }
+  .oba-card-footer {
+    border-top: 1px solid rgba(23, 18, 14, 0.1);
+    padding-top: 16px;
+  }
+  .oba-price-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .oba-price {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 26px;
+    font-weight: 700;
+    color: #17120E;
+  }
+  .oba-price-sub {
+    font-size: 12px;
+    color: #7C401A;
+    font-weight: 500;
+  }
+  .oba-subtotal-box {
+    text-align: right;
+  }
+  .oba-subtotal-label {
+    font-size: 11px;
+    color: #7C401A;
+    font-weight: 600;
+  }
+  .oba-subtotal-val {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    color: #3B1F11;
+  }
+  .oba-stepper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .oba-step-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.12s ease, background-color 0.15s ease;
+  }
+  .oba-step-btn:active:not(:disabled) {
+    transform: scale(0.96);
+  }
+  .oba-step-minus {
+    background-color: #24130B;
+    color: #FAF7F0;
+  }
+  .oba-step-minus:hover:not(:disabled) {
+    background-color: #3B1F11;
+    color: #FAF7F0;
+  }
+  .oba-step-minus:disabled {
+    background-color: #EFE8DA;
+    color: rgba(23, 18, 14, 0.3);
+    cursor: not-allowed;
+  }
+  .oba-step-plus {
+    background-color: #D4AF37;
+    color: #0B0908;
+  }
+  .oba-step-plus:hover {
+    background-color: #E5C158;
+    color: #0B0908;
+  }
+  .oba-step-display {
+    flex: 1;
+    height: 56px;
+    border-radius: 12px;
+    background-color: #EFE8DA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .oba-step-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px;
+    font-weight: 700;
+    color: #17120E;
+    line-height: 1;
+  }
+  .oba-step-unit {
+    font-size: 11px;
+    color: #7C401A;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+  .oba-cart-summary {
+    margin-top: 28px;
+    padding: 20px 24px;
+    border-radius: 16px;
+    background-color: #16110E;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .oba-cart-lines {
+    font-size: 14px;
+    color: rgba(239, 232, 218, 0.9);
+  }
+  .oba-cart-total {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    color: #D4AF37;
+    margin-top: 4px;
+  }
+  .oba-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  }
+  .oba-btn-lg {
+    min-height: 58px;
+    font-size: 16px;
+  }
+  .oba-btn-full {
+    width: 100%;
+  }
+  .oba-btn-gold {
+    background-color: #D4AF37;
+    color: #0B0908 !important;
+  }
+  .oba-btn-gold:hover {
+    background-color: #E5C158;
+  }
+  .oba-btn-dark {
+    background-color: #24130B;
+    color: #FAF7F0 !important;
+  }
+  .oba-btn-whatsapp {
+    background-color: #047857;
+    color: #FFFFFF !important;
+  }
+  .oba-btn-whatsapp:hover {
+    background-color: #059669;
+  }
+  .oba-btn-muted {
+    background-color: #EFE8DA;
+    color: #17120E !important;
+  }
+  .oba-form-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  .oba-paper-card {
+    background-color: #FAF7F0;
+    color: #17120E;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid rgba(169, 113, 66, 0.35);
+  }
+  .oba-dark-card {
+    background-color: #16110E;
+    color: #FAF7F0;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+  }
+  .oba-form-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #17120E;
+    margin: 0 0 16px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(23, 18, 14, 0.1);
+  }
+  .oba-dark-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FAF7F0;
+    margin: 0 0 16px 0;
+  }
+  .oba-field-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  @media (min-width: 600px) {
+    .oba-field-grid.oba-cols-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .oba-field {
+    margin-bottom: 14px;
+  }
+  .oba-field label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #17120E;
+    margin-bottom: 6px;
+  }
+  .oba-field input, .oba-field textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(23, 18, 14, 0.22);
+    background-color: #FFFFFF;
+    color: #17120E;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+  }
+  .oba-field input:focus, .oba-field textarea:focus {
+    border-color: #D4AF37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
+  }
+  .oba-date-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .oba-date-row input {
+    flex: 1;
+    min-width: 170px;
+  }
+  .oba-date-quick {
+    min-height: 46px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(23, 18, 14, 0.22);
+    background-color: #FFFFFF;
+    color: #17120E;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .oba-date-quick.active {
+    background-color: #24130B;
+    color: #FAF7F0;
+    border-color: #24130B;
+  }
+  .oba-gps-status {
+    margin-top: 8px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background-color: #EFE8DA;
+    color: #17120E;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .oba-recap-box {
+    padding: 14px 0;
+    border-top: 1px solid rgba(250, 247, 240, 0.12);
+    border-bottom: 1px solid rgba(250, 247, 240, 0.12);
+    margin-bottom: 16px;
+    font-size: 15px;
+  }
+  .oba-cod-note {
+    padding: 14px;
+    border-radius: 12px;
+    background-color: #24130B;
+    border: 1px solid rgba(169, 113, 66, 0.4);
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  .oba-error {
+    padding: 12px 14px;
+    border-radius: 10px;
+    background-color: #4C0519;
+    border: 1px solid #F43F5E;
+    color: #FFE4E6;
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+  .oba-wa-review {
+    margin-top: 24px;
+    border: 2px solid #D4AF37;
+  }
+  .oba-review-info {
+    font-size: 14px;
+    color: #4A2715;
+    margin: 0 0 14px 0;
+  }
+  .oba-wa-preview {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(23, 18, 14, 0.18);
+    border-radius: 12px;
+    padding: 16px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #17120E;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    margin: 0 0 16px 0;
+  }
+  .oba-wa-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .oba-emblem-box {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #16110E 0%, #3B1F11 55%, #24130B 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+  }
+  .oba-footer {
+    border-top: 1px solid rgba(169, 113, 66, 0.2);
+    padding: 26px 0;
+    font-size: 13px;
+    color: rgba(239, 232, 218, 0.72);
+  }
+  .oba-footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+</style>
+
+<script>
+  (function () {
+    // 1. NUMÉRO WHATSAPP OFFICIEL OBA IMPÉRIAL (sans "+" ni espaces)
+    var OBA_WHATSAPP_NUMBER = '2290162017062';
+
+    // 2. LIENS DES IMAGES WORDPRESS (facultatif : collez ici les URLs depuis Médias WordPress)
+    var OBA_IMAGES = {
+      hero: '', // Ex: 'https://votresite.com/wp-content/uploads/2026/11/oba-hero.png'
+      gin: '',  // Ex: 'https://votresite.com/wp-content/uploads/2026/11/oba-gin.png'
+      whisky: '' // Laisser vide pour afficher l'emblème officiel OBA IMPÉRIAL WHISKY
+    };
+
+    var PRODUCTS = {
+      gin: { name: 'OBA IMPÉRIAL GIN', price: 2750, qty: 0 },
+      whisky: { name: 'OBA IMPÉRIAL WHISKY', price: 3500, qty: 0 }
+    };
+
+    var gps = { hasGps: false, lat: null, lng: null };
+
+    function formatFcfa(n) {
+      return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' FCFA';
+    }
+
+    function renderEmblem(title, subtitle) {
+      return (
+        '<div class="oba-emblem-box">' +
+          '<svg width="60" height="60" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:10px">' +
+            '<circle cx="32" cy="32" r="30" stroke="#D4AF37" stroke-width="1.5" fill="#16110E"/>' +
+            '<path d="M16 42L20 24L28 31L32 19L36 31L44 24L48 42H16Z" stroke="#D4AF37" stroke-width="2" stroke-linejoin="round" fill="#3B1F11"/>' +
+            '<path d="M18 47H46" stroke="#A97142" stroke-width="2" stroke-linecap="round"/>' +
+            '<circle cx="32" cy="15" r="2" fill="#E5C158"/>' +
+          '</svg>' +
+          '<div style="font-family:Cormorant Garamond,Georgia,serif;font-size:24px;font-weight:700;letter-spacing:0.14em;color:#FAF7F0;">' + title + '</div>' +
+          '<div style="font-family:Cormorant Garamond,Georgia,serif;font-size:18px;font-weight:600;letter-spacing:0.18em;color:#D4AF37;margin-top:4px;">' + subtitle + '</div>' +
+          '<div style="font-size:10px;letter-spacing:0.18em;color:rgba(239,232,218,0.72);margin-top:8px;">BORN FROM AFRICA ROYALTIES</div>' +
+        '</div>'
+      );
+    }
+
+    // Initialiser les visuels
+    var heroEl = document.getElementById('oba-hero-media');
+    heroEl.innerHTML = OBA_IMAGES.hero
+      ? '<img src="' + OBA_IMAGES.hero + '" alt="OBA IMPÉRIAL" />'
+      : renderEmblem('OBA IMPÉRIAL', 'CATALOGUE OFFICIEL');
+
+    var ginMediaEl = document.getElementById('oba-media-gin');
+    ginMediaEl.innerHTML = OBA_IMAGES.gin
+      ? '<img src="' + OBA_IMAGES.gin + '" alt="OBA IMPÉRIAL GIN" />'
+      : renderEmblem('OBA IMPÉRIAL', 'GIN · PACK DE 10');
+
+    var whiskyMediaEl = document.getElementById('oba-media-whisky');
+    whiskyMediaEl.innerHTML = OBA_IMAGES.whisky
+      ? '<img src="' + OBA_IMAGES.whisky + '" alt="OBA IMPÉRIAL WHISKY" />'
+      : renderEmblem('OBA IMPÉRIAL', 'WHISKY · PACK DE 10');
+
+    function updateUI() {
+      ['gin', 'whisky'].forEach(function (key) {
+        var p = PRODUCTS[key];
+        document.getElementById('oba-qty-' + key).textContent = p.qty;
+        document.getElementById('oba-unit-' + key).textContent = p.qty > 1 ? 'packs de 10' : 'pack de 10';
+        document.getElementById('oba-minus-' + key).disabled = p.qty === 0;
+        var card = document.getElementById('oba-card-' + key);
+        var subWrap = document.getElementById('oba-sub-' + key + '-wrap');
+        if (p.qty > 0) {
+          card.classList.add('oba-card-active');
+          subWrap.style.display = 'block';
+          document.getElementById('oba-sub-' + key).textContent = formatFcfa(p.qty * p.price);
+        } else {
+          card.classList.remove('oba-card-active');
+          subWrap.style.display = 'none';
+        }
+      });
+
+      var total = PRODUCTS.gin.qty * PRODUCTS.gin.price + PRODUCTS.whisky.qty * PRODUCTS.whisky.price;
+      var lines = [];
+      if (PRODUCTS.gin.qty > 0) lines.push(PRODUCTS.gin.name + ' (' + PRODUCTS.gin.qty + ' pack' + (PRODUCTS.gin.qty > 1 ? 's' : '') + ')');
+      if (PRODUCTS.whisky.qty > 0) lines.push(PRODUCTS.whisky.name + ' (' + PRODUCTS.whisky.qty + ' pack' + (PRODUCTS.whisky.qty > 1 ? 's' : '') + ')');
+
+      var summaryEl = document.getElementById('oba-cart-summary');
+      var recapEl = document.getElementById('oba-recap-box');
+
+      if (total > 0) {
+        summaryEl.style.display = 'flex';
+        document.getElementById('oba-cart-lines').textContent = lines.join(' · ');
+        document.getElementById('oba-cart-total').textContent = 'Total : ' + formatFcfa(total);
+
+        var html = '';
+        if (PRODUCTS.gin.qty > 0) {
+          html += '<div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span>OBA IMPÉRIAL GIN : ' + PRODUCTS.gin.qty + ' pack(s) × 2 750 FCFA</span><strong style="color:#D4AF37;">' + formatFcfa(PRODUCTS.gin.qty * 2750) + '</strong></div>';
+        }
+        if (PRODUCTS.whisky.qty > 0) {
+          html += '<div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span>OBA IMPÉRIAL WHISKY : ' + PRODUCTS.whisky.qty + ' pack(s) × 3 500 FCFA</span><strong style="color:#D4AF37;">' + formatFcfa(PRODUCTS.whisky.qty * 3500) + '</strong></div>';
+        }
+        html += '<div style="display:flex;justify-content:space-between;padding-top:10px;margin-top:8px;border-top:1px solid rgba(250,247,240,0.15);font-size:18px;font-weight:700;"><span>TOTAL À PAYER À LA LIVRAISON</span><span style="color:#D4AF37;">' + formatFcfa(total) + '</span></div>';
+        recapEl.innerHTML = html;
+      } else {
+        summaryEl.style.display = 'none';
+        recapEl.textContent = 'Sélectionnez au moins un pack ci-dessus pour voir votre total.';
+      }
+    }
+
+    document.getElementById('oba-plus-gin').addEventListener('click', function () { PRODUCTS.gin.qty = Math.min(999, PRODUCTS.gin.qty + 1); updateUI(); });
+    document.getElementById('oba-minus-gin').addEventListener('click', function () { PRODUCTS.gin.qty = Math.max(0, PRODUCTS.gin.qty - 1); updateUI(); });
+    document.getElementById('oba-plus-whisky').addEventListener('click', function () { PRODUCTS.whisky.qty = Math.min(999, PRODUCTS.whisky.qty + 1); updateUI(); });
+    document.getElementById('oba-minus-whisky').addEventListener('click', function () { PRODUCTS.whisky.qty = Math.max(0, PRODUCTS.whisky.qty - 1); updateUI(); });
+
+    // Dates rapides (fuseau horaire local)
+    function toLocalDateStr(date) {
+      var y = date.getFullYear();
+      var m = String(date.getMonth() + 1).padStart(2, '0');
+      var d = String(date.getDate()).padStart(2, '0');
+      return y + '-' + m + '-' + d;
+    }
+
+    var todayDate = new Date();
+    var tomorrowDate = new Date(todayDate.getFullYear(), todayDate.getMonth(), todayDate.getDate() + 1);
+    var todayStr = toLocalDateStr(todayDate);
+    var tomorrowStr = toLocalDateStr(tomorrowDate);
+    var dateInput = document.getElementById('oba-f-date');
+    var btnToday = document.getElementById('oba-date-today');
+    var btnTomorrow = document.getElementById('oba-date-tomorrow');
+
+    function syncDateButtons() {
+      btnToday.classList.toggle('active', dateInput.value === todayStr);
+      btnTomorrow.classList.toggle('active', dateInput.value === tomorrowStr);
+    }
+
+    dateInput.min = todayStr;
+    dateInput.value = tomorrowStr;
+    syncDateButtons();
+
+    btnToday.addEventListener('click', function () {
+      dateInput.value = todayStr;
+      syncDateButtons();
+    });
+    btnTomorrow.addEventListener('click', function () {
+      dateInput.value = tomorrowStr;
+      syncDateButtons();
+    });
+    dateInput.addEventListener('change', syncDateButtons);
+
+    // Partage GPS
+    var gpsBtn = document.getElementById('oba-gps-btn');
+    var gpsStatus = document.getElementById('oba-gps-status');
+    gpsBtn.addEventListener('click', function () {
+      if (!navigator.geolocation) {
+        gpsStatus.style.display = 'block';
+        gpsStatus.textContent = "Géolocalisation indisponible sur cet appareil. Indiquez simplement votre adresse.";
+        return;
+      }
+      gpsBtn.textContent = 'RECHERCHE DE VOTRE POSITION...';
+      navigator.geolocation.getCurrentPosition(
+        function (pos) {
+          gps.hasGps = true;
+          gps.lat = Number(pos.coords.latitude.toFixed(6));
+          gps.lng = Number(pos.coords.longitude.toFixed(6));
+          gpsBtn.textContent = 'ACTUALISER MA POSITION GPS';
+          gpsStatus.style.display = 'block';
+          gpsStatus.textContent = 'Position GPS enregistrée : ' + gps.lat + ', ' + gps.lng;
+        },
+        function () {
+          gpsBtn.textContent = 'PARTAGER MA POSITION GPS (FACULTATIF)';
+          gpsStatus.style.display = 'block';
+          gpsStatus.textContent = 'Position GPS non partagée. Votre adresse écrite suffit.';
+        },
+        { enableHighAccuracy: true, timeout: 12000 }
+      );
+    });
+
+    // Préparation du message WhatsApp
+    var lastMessage = '';
+    document.getElementById('oba-order-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var errEl = document.getElementById('oba-form-error');
+      errEl.style.display = 'none';
+
+      var total = PRODUCTS.gin.qty * 2750 + PRODUCTS.whisky.qty * 3500;
+      if (total <= 0) {
+        errEl.textContent = 'Veuillez sélectionner au moins un pack (Gin ou Whisky) avant de continuer.';
+        errEl.style.display = 'block';
+        return;
+      }
+
+      var name = document.getElementById('oba-f-name').value.trim();
+      var phone = document.getElementById('oba-f-phone').value.trim();
+      var city = document.getElementById('oba-f-city').value.trim();
+      var district = document.getElementById('oba-f-district').value.trim();
+      var address = document.getElementById('oba-f-address').value.trim();
+      var reqDate = dateInput.value.trim();
+      var notes = document.getElementById('oba-f-notes').value.trim() || 'Aucune';
+
+      if (name.length < 2 || phone.length < 6 || city.length < 2 || district.length < 2 || address.length < 2 || !reqDate) {
+        errEl.textContent = 'Veuillez remplir tous les champs obligatoires (*).';
+        errEl.style.display = 'block';
+        return;
+      }
+
+      var orderLines = [];
+      if (PRODUCTS.gin.qty > 0) orderLines.push('- OBA IMPÉRIAL GIN : ' + PRODUCTS.gin.qty + ' pack(s) × 2 750 FCFA');
+      if (PRODUCTS.whisky.qty > 0) orderLines.push('- OBA IMPÉRIAL WHISKY : ' + PRODUCTS.whisky.qty + ' pack(s) × 3 500 FCFA');
+
+      var gpsText = gps.hasGps
+        ? gps.lat + ', ' + gps.lng + ' (https://maps.google.com/?q=' + gps.lat + ',' + gps.lng + ')'
+        : 'Non partagée';
+
+      lastMessage = [
+        'NOUVELLE COMMANDE — OBA IMPÉRIAL',
+        '',
+        'Client : ' + name,
+        'Téléphone : ' + phone,
+        '',
+        'COMMANDE :',
+        orderLines.join('\n'),
+        '',
+        'TOTAL : ' + formatFcfa(total),
+        '',
+        'LIVRAISON :',
+        'Ville : ' + city,
+        'Quartier : ' + district,
+        'Adresse : ' + address,
+        'GPS : ' + gpsText,
+        'Date souhaitée : ' + reqDate,
+        '',
+        'Instructions : ' + notes
+      ].join('\n');
+
+      document.getElementById('oba-wa-preview').textContent = lastMessage;
+      document.getElementById('oba-wa-link').href = 'https://wa.me/' + OBA_WHATSAPP_NUMBER + '?text=' + encodeURIComponent(lastMessage);
+
+      var reviewEl = document.getElementById('oba-wa-review');
+      reviewEl.style.display = 'block';
+      reviewEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    document.getElementById('oba-wa-copy').addEventListener('click', function () {
+      var btn = this;
+      if (!lastMessage || !navigator.clipboard) return;
+      navigator.clipboard.writeText(lastMessage).then(function () {
+        btn.textContent = 'Message copié !';
+        setTimeout(function () { btn.textContent = 'Copier le message'; }, 2500);
+      });
+    });
+
+    updateUI();
+  })();
+</script>

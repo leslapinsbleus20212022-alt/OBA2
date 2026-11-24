@@ -1,0 +1,6 @@
+{
+  "name": "OBA IMPÉRIAL",
+  "description": "Plateforme officielle de commande de spiritueux pour grossistes et revendeurs — OBA IMPÉRIAL (Born From Africa Royalties).",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
